@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/7.1/phpunit.xsd"
-         bootstrap="./vendor/autoload.php"
+         bootstrap="./tests/bootstrap.php"
          colors="true">
     <testsuites>
         <testsuite name="Test Suite">
@@ -14,4 +14,9 @@
             <directory suffix=".php">./src</directory>
         </whitelist>
     </filter>
+    <php>
+        <const name="WEB_SERVER_HOST" value="localhost"/>
+        <const name="WEB_SERVER_PORT" value="1349"/>
+        <const name="WEB_SERVER_DOCROOT" value="./web"/>
+    </php>
 </phpunit>
